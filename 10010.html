@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Receipt</title>
+	<style>
+    @page {
+        size: A4 portrait; 
+        @frame header_frame {
+            -pdf-frame-content: header_content;
+            left: 15pt; width: 565pt; top: 15pt; height: 60pt;
+        }
+        @frame content_frame {
+            left: 15pt;
+            width: 565pt;
+            top: 75pt;
+            height: 540pt;
+        }
+        @frame footer_frame {
+            -pdf-frame-content: footer_content;
+            left: 15pt; width: 565pt; top: 630pt; height: 200pt;
+        }
+    }
+    thead.headerRow > tr th{
+        background-color: #577DA7 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        font-weight: 500;
+    }
+
+    .orderSection {
+        color: #577DA7;
+        text-align: right;
+        font-size: 26px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    div {
+        font-size: 12px !important;
+    }
+    .text{
+        font-weight: 600;
+    }
+    .borderDate{
+        border-top-color: rgb(210, 210, 210);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(210, 210, 210);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-bottom-color: rgb(210, 210, 210);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: rgb(210, 210, 210);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+    th, td {
+        padding: 5px;
+    }
+    .field1{
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<div style="padding: 10px">
+    <div style="width: 45%; display: inline-block; vertical-align: top;" id="header_content">
+        <img src="https://s3-us-west-2.amazonaws.com/static.fusionseven.net/logos/FS_logo.jpg" style="width: 250px"/>
+    </div>
+    <hr width="50%">
+    <div class="wrapper">
+        <div class="field1">
+            <table>
+                <tbody>
+                    <tr>
+                        <td align="left" valign="bottom">
+                            <br>
+                            <br>
+                                <span class="text">
+                                    Name:
+                                </span>
+                                <span>Liberty Hardware</span>
+                            <br>
+                                <span class="text">
+                                    Address:
+                                </span>
+                                <span>None</span>
+                            <br>
+                                <span class="text">
+                                    City/State:
+                                </span>
+                                <span>None, None</span>
+                            <br>
+                                <span class="text">
+                                    Zip:
+                                </span>
+                                <span>None</span>
+                            <br>
+                                <span class="text">
+                                    Email:
+                                </span>
+                                <span>fusionseven.io@gmail.com</span>
+                            <br>
+                                <span class="text">
+                                    Phone:
+                                </span>
+                                <spanspan>None</span>
+                        </td>
+                        <td align="right" valign="top">
+                            <div class="orderSection">Order Receipt</div>
+                            <div style="text-align: right">
+                                <span style="width: 80px; font-weight: 600; margin-right: 20px">Date: </span>
+                                <span class="borderDate" style="text-align: center; padding: 0px 10px; width: 120px; display: inline-block;">2020-01-23 09:52:51</span>
+                            <br>
+                                <span style="width: 80px; font-weight: 600; margin-right: 20px">Order #</span>
+                                <span class="borderDate" style="text-align: center; padding: 0px 10px; width: 120px; display: inline-block;">112241</span>
+                            </div>
+                        </td>            
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="tableWrapper">
+            <table width= 100% BORDER="1" BORDERCOLOR="white" cellpadding="0">
+                <thead class="headerRow">
+                <tr>
+                    <th bgcolor="#577DA7" width="20%" style="color:white;">Line Item ID</th>
+                    <th bgcolor="#577DA7" width="40%" style="color:white;">Description</th>
+                    <th bgcolor="#577DA7" width="10%" style="color:white;">Qty</th>
+                    <th bgcolor="#577DA7" width="15%" style="color:white;">Price</th>
+                    <th bgcolor="#577DA7" width="15%" style="color:white;">Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <tr>
+                    <td style="text-align: left">112241</td>
+                    <td style="text-align: left">Facebook</td>
+                    <td style="text-align: right">1</td>
+                    <td style="text-align: right">50.75</td>
+                    <td style="text-align: right">50.75</td>
+                </tr>
+                
+                <tr>
+                    <td style="text-align: left">112242</td>
+                    <td style="text-align: left">Facebook</td>
+                    <td style="text-align: right">1</td>
+                    <td style="text-align: right">100.5</td>
+                    <td style="text-align: right">100.5</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="field2">
+            <table>
+                <tbody>
+                    <tr>
+                        <td valign="top" align="center">
+                            <span class="text">Sale made by:</span>
+                            <span> Home Depot Dynamic Media Advertising Portal </span>
+                        </td>
+                        <td align="right">
+                            <span class="text">Subtotal: $</span>
+                            <span>151.25</span>
+                            <br>
+                            <span class="text">Discount: </span>
+                            <span>0</span>
+                            <br>
+                            <span class="text">Sales Tax Rate: </span>
+                            <span class="borderDate">0</span>
+                            <br>
+                            <span class="text">Sales Tax: </span>
+                            <span>0</span>
+                            <br>
+                            <br>
+                            <span class="text">Total: $</span>
+                            <span class="text">151.25</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="field3">
+            <!-- <div style="width:5%; float: left; visibility: hidden; margin-top: 20px">
+                1
+            </div> -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td valign="top" align="left">
+                            
+                            <span class="text">Credit Card No.</span>
+                            <span>VISA 1111</span>
+                            <br>
+                            <span class="text">Expiration:</span>
+                            <span>1 2021</span>
+                            
+                        </td>
+                        <td align="right">
+                            <span class="text">Credit Card: </span>
+                            
+                                <span> [x] </span>
+                            
+                            <br>
+                            <span class="text">Cheque: </span>
+                            
+                                <span> [&nbsp;&nbsp;] </span>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+    <div id="footer_content">
+        <div class="field4" style="text-align: center;">
+            <div><span style="font-size: 18px;">Thanks for your business!</span>
+            <br>
+                Should you have any enquiries concerning this receipt, please contact Customer Support at
+            <br>
+            910 / Suite 120 East Hamilton Ave, Campbell, CA, 95008
+            <br>
+                Tel: 1-866-200-2978 E-mail: support@fusionseven.com Web: www.fusionseven.com
+            </div>
+            <i class="fa fa-scissors" aria-hidden="true" style="-webkit-transform: rotate(180deg); float: right; font-size: 24px; position: relative; top: -12px; left: -10px;"></i>
+        </div>
+        <hr style="border-top-style: dashed;">
+
+        <div class="field5">
+            <table>
+                <tbody>
+                    <tr>
+                        <td valign="top" align="left">
+                                <span class="text">Name: </span>
+                                <span>Liberty Hardware</span>
+                            <br>
+                                <span class="text">Address: </span>
+                                <span>None</span>
+                            <br>
+                            <br>
+                                <span style="font-size: 9px;">910 / Suite 120 East Hamilton Ave, Campbell, CA, 95008</span>
+                            <br>
+                                <span style="font-size: 9px;">E-mail: support@fusionseven.com</span>
+                            <br>
+                                <span style="font-size: 9px;">Web: www.fusionseven.com</span>
+                        </td>
+                        <td valign="top" align="right">
+                                <span class="orderSection" style="font-size: 18px;">Sales Receipt Slip</span>
+                            <br><br>
+                                <span class="text">Date: </span>
+                                <span>2020-01-23 09:52:51</span>
+                            <br>
+                                <span class="text">Order # </span>
+                                <span>112241</span>
+                            <br><br>
+                                <span style="font-size: 16px;" class="text">Amount Received: $</span>
+                                <span style="font-size: 16px;" class="text borderDate">151.25</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
