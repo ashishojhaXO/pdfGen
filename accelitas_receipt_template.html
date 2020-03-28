@@ -35,6 +35,10 @@
 		p.cjk { font-family: "MS Mincho" }
 		p.ctl { font-family: "Times New Roman" }
 		a:link { color: #0563c1 }
+
+		html {
+			font-size: 9pt;
+		}
 	</style>
 </head>
 <body lang="en-US" link="#0563c1" dir="ltr">
@@ -103,9 +107,11 @@
 			<div class="western" >
 <div color="#7f7f7f"><div face="Open Sans, serif">
 <div size="1" >Zip:</div></div></div></div>
+
 			<div class="western" >
 <div color="#7f7f7f"><div face="Open Sans, serif">
 <div size="1" >Email:</div></div></div></div>
+
 			<div class="western"><div color="#7f7f7f"><div face="Open Sans, serif"><div size="1" >
 				Phone:
 			</div></div></div></div>
@@ -130,7 +136,7 @@
 			{{ json_data.zip }}
 		</div></div></div></div>
 			<div class="western" ><div color="#70ad47"><div face="Open Sans, serif">
-		<div size="1" >
+		<div size="1" style="color: #70ad47">
 			{{ json_data.email }}
 		</div></div></div></div>
 			<div class="western" ><div color="#000000"><div face="Open Sans, serif">
@@ -146,32 +152,37 @@
 <br />
 <div class="western" style="margin-bottom: 0cm; line-height: 0.56cm"><div face="Open Sans, serif"><div size="2" >&shy;&shy;&shy;&shy;&shy;&shy;</div></div></div>
 <table width="623" cellpadding="7" cellspacing="0">
-	<col width="111">
+	<col width="105">
 	<col width="328">
-	<col width="22">
-	<col width="46">
-	<col width="45">
+	<col width="30">
+	<col width="50">
+	<col width="50">
 	<tr valign="top">
-		<td width="111" bgcolor="#70ad47" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" bgcolor="#70ad47" 
+		>
 			<div class="western"><div color="#ffffff"><div face="Open Sans, serif">
 				<div size="1" >
 					<b>
 						LINE ITEM ID
 					</b></div></div></div></div>
 		</td>
-		<td width="328" bgcolor="#70ad47" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="328" bgcolor="#70ad47" 
+		>
 			<div class="western"><div color="#ffffff"><div face="Open Sans, serif">
 				<div size="1" ><b>DESCRIPTION</b></div></div></div></div>
 		</td>
-		<td width="22" bgcolor="#70ad47" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" bgcolor="#70ad47" 
+		>
 			<div class="western"><div color="#ffffff"><div face="Open Sans, serif">
 				<div size="1" ><b>QTY</b></div></div></div></div>
 		</td>
-		<td width="46" bgcolor="#70ad47" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#70ad47" 
+		>
 			<div class="western"><div color="#ffffff"><div face="Open Sans, serif">
 				<div size="1" ><b>PRICE</b></div></div></div></div>
 		</td>
-		<td width="45" bgcolor="#70ad47" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#70ad47" 
+		>
 			<div class="western"><div color="#ffffff"><div face="Open Sans, serif">
 				<div size="1" ><b>AMOUNT</b></div></div></div></div>
 		</td>
@@ -180,7 +191,7 @@
 				{% for item in json_data.line_items %}
 
 	<tr valign="top">
-		<td width="111" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif">
 				<div size="1" >
 					{{ item.line_item_id }}
@@ -197,7 +208,7 @@
 					{{ item.product}}
 				</div></div></div>
 		</td>
-		<td width="22" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western">
 				<div color="#000000">
 					<div face="Open Sans, serif">
@@ -205,14 +216,14 @@
 							1
 						</div></div></div></div>
 		</td>
-		<td width="46" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000"><div face="Open Sans, serif">
 				<div size="1" >
 					{{ item.campaign_line_item_budget }}
 				</div>
 			</div></div></div>
 		</td>
-		<td width="45" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000"><div face="Open Sans, serif">
 				<div size="1" ><b>
 					{{ item.campaign_line_item_budget }}
@@ -224,7 +235,7 @@
 
 
 	<tr valign="top">
-		<td width="111" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif"><div size="1" >
 				Subtotal:
 			</div></div></div>
@@ -234,17 +245,17 @@
 
 			</div>
 		</td>
-		<td width="22" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000"><div face="Open Sans, serif">
 				<div size="1" ><b>
 					{{ total }}
@@ -252,7 +263,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="111" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif"><div size="1" >
 				Discount:
 			</div></div></div>
@@ -262,17 +273,17 @@
 
 			</div>
 		</td>
-		<td width="22" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000">  <div face="Open Sans, serif"><div size="1" >
 				<b>
 					0
@@ -280,7 +291,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="111" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif"><div size="1" >
 				Sales Tax Rate:
 			</div></div></div>
@@ -290,25 +301,23 @@
 
 			</div>
 		</td>
-		<td width="22" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
-			<div class="western" align="right"><div color="#000000"><div face="Open Sans, serif"><div size="1" >
-				<b>
-					0
-				</b></div></div></div></div>
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+			<div class="western"><div color="#000000"><div face="Open Sans, serif"><div size="1" >
+				<b>0</b></div></div></div></div>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="111" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif"><div size="1" >
 				Sales Tax:
 		</div></div></div>
@@ -318,17 +327,17 @@
 
 			</div>
 		</td>
-		<td width="22" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000">  <div face="Open Sans, serif"><div size="1" >
 				<b>
 					0
@@ -336,7 +345,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="111" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
@@ -346,24 +355,24 @@
 
 			</div>
 		</td>
-		<td width="22" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="111" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="105" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div face="Open Sans, serif"><div size="1" >
 				<b>
 					Total:
@@ -375,17 +384,17 @@
 
 			</div>
 		</td>
-		<td width="22" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="30" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="46" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><br/>
 
 			</div>
 		</td>
-		<td width="45" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
+		<td width="50" style="border: 1px solid #bfbfbf; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm">
 			<div class="western"><div color="#000000"><div face="Open Sans, serif"><div size="1" >
 				<b>
 {{ total }}
@@ -432,7 +441,8 @@
 				{% endif %}
 			<div face="Open Sans, serif"><div size="1" >
 			Cash
-			</div></div></div>
+			</div></div>
+			</div>
 			<div class="western" ><br/>
 
 			</div>
@@ -516,7 +526,8 @@
 <div class="western" style="margin-bottom: 0cm; line-height: 0.56cm"><br/>
 
 </div>
-<div class="western" style="margin-bottom: 0cm; line-height: 100%"><div color="#70ad47"><div face="Open Sans, serif"><div size="1" >
+<div class="western" style="margin-bottom: 0cm; line-height: 100%">
+<div style="color:#70ad47"><div face="Open Sans, serif"><div size="1" >
 	<b>
 		Thank you for your business!
 </b></div></div></div></div>
@@ -529,9 +540,17 @@
 </div>
 <div class="western" style="margin-bottom: 0cm; line-height: 100%"><div face="Open Sans, serif"><div size="1" >
 	please contact Customer Support: 1-415-842-7700 
-</div></div><a href="mailto:support@accelitas.com"><div color="#70ad47"><div face="Open Sans, serif"><div size="1" ><span style="text-decoration: none">support@accelitas.com</span></div></div></div></a>
-<div face="Open Sans, serif"><div size="1" >
+<a href="mailto:support@accelitas.com">
+<span style="color:#70ad47">
+	<span style="text-decoration: none">
+	support@accelitas.com
+	</span>
+</span>
+</a>
 - www.accelitas.com
+
+</div></div>
+<div face="Open Sans, serif"><div size="1" >
 </div></div></div>
 </body>
 </html>
