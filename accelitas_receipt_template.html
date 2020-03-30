@@ -12,7 +12,6 @@
 	<meta name="ScaleCrop" content="false"/>
 	<meta name="ShareDoc" content="false"/>
 	<style type="text/css">
-		/* @page { size: 21.59cm 27.94cm; margin-left: 2.54cm; margin-right: 2.54cm; margin-top: 2.23cm; margin-bottom: 2.54cm } */
     @page {
         size: A4 portrait; 
         @frame header_frame {
@@ -37,6 +36,14 @@
 			height: 200pt; */
         }
     }
+		/* @import 'https://fonts.googleapis.com/css?family=Open+Sans'; */
+		@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  /* font-weight: 400; */
+  src: url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
+}
+
 		/* p { 
 			margin-bottom: 0.25cm; 
 			direction: ltr; 
@@ -51,8 +58,10 @@
 		a:link { color: #0563c1 } 
 		*/
 
+
 		html {
-			font-size: 11pt;
+			/* font-size: 11pt; */
+			font-size: 8pt;
 			/* font-family: "Times New Roman", serif; */
 			font-family: "Open Sans", serif;
 		}
@@ -70,33 +79,53 @@
 			/* line-height: 100%; */
 			/* padding-bottom: 20px; */
 		/* } */
+
+		.logo {
+			width: 268px; 
+			/* width: 30%; */
+		}
+		.logo-address {
+			width: 268px; 
+			color: grey;
+			font-size: 9pt; 
+		}
+		.lan {
+			width: 268px; 
+			/* border-top-style: outset; 
+			border-top-width: initial; */
+        border-top-style: solid;
+        border-top-width: 1px;
+			padding-top: 1pt;
+		}
+
+
 	</style>
 </head>
-<body lang="en-US" link="#0563c1" dir="ltr">
-<div title="header">
+<body lang="en-US" dir="ltr">
+
+<div class="logo" title="header">
 	<div style="margin-left: -20px;">
 		<img src="https://s3-us-west-2.amazonaws.com/static.fusionseven.io/Accelitas_logo_dark.png" style="width: 250px"/>
 	</div>
-	<div 
-		style="width: 268px; font-size: medium; border-top-style: outset; border-top-width: thin;"
-	>
+	<div class="logo-address">
+		<div class="lan">&nbsp;</div>
 		6 Hamilton Landing, Suite 220, Novato, CA 94949 
 		<br />
 		415-842-7700 | www.accelitas.com
 	</div>
 </div>
+
 <div class="some" align="right" >
 
-<div style="color:#70ad47"><div face="Open Sans, serif">
+<div style="color:#70ad47"><div class="face">
 	<div >
 		{{ json_data.order_creation_date }}
 </div>
 </div></div></div>
 
 <div class="some" >
-	<div face="Open Sans, serif">
-
-	<div style="font-size: 11pt" >
+	<div class="face">
+	<div style="font-size: 14pt" >
 		<b>
 			The Home Depot, Inc.
 		</b>
@@ -104,12 +133,12 @@
 
 	</div></div>
 <div class="some" >
-	<div face="Open Sans, serif">
+	<div class="face">
 	<div >
 		Payment processed by Accelitas, Inc. on behalf of The Home Depot, Inc.
 	</div></div></div>
 <div class="some" >
-	<div face="Open Sans, serif"><div >
+	<div class="face"><div >
 		Sale made by: Home Depot Dynamic Media Advertising Portal
 	</div></div></div>
 <div class="some" >
@@ -124,31 +153,31 @@
 		"
 		>
 			<div class="some" >
-<div color="#7f7f7f"><div face="Open Sans, serif">
+<div color="#7f7f7f"><div class="face">
 				<div >
 					Name:
 				</div>
 </div></div></div>
 
 			<div class="some" >
-<div color="#7f7f7f"><div face="Open Sans, serif">
+<div color="#7f7f7f"><div class="face">
 	<div >
 		Address:
 
 	</div>
 </div></div></div>
 			<div class="some" >
-<div color="#7f7f7f"><div face="Open Sans, serif">
+<div color="#7f7f7f"><div class="face">
 <div >City/State:</div></div></div></div>
 			<div class="some" >
-<div color="#7f7f7f"><div face="Open Sans, serif">
+<div color="#7f7f7f"><div class="face">
 <div >Zip:</div></div></div></div>
 
 			<div class="some" >
-<div color="#7f7f7f"><div face="Open Sans, serif">
+<div color="#7f7f7f"><div class="face">
 <div >Email:</div></div></div></div>
 
-			<div class="some"><div color="#7f7f7f"><div face="Open Sans, serif"><div >
+			<div class="some"><div color="#7f7f7f"><div class="face"><div >
 				Phone:
 			</div></div></div></div>
 		</td>
@@ -158,29 +187,29 @@
 		"
 		">
 			<div class="some" >
-			<div color="#000000"><div face="Open Sans, serif">
+			<div color="#000000"><div class="face">
 		<div >
 			{{ json_data.company_name }}
 		</div></div></div>
 		</div>
 
-			<div class="some" ><div color="#000000"><div face="Open Sans, serif">
+			<div class="some" ><div color="#000000"><div class="face">
 		<div >
 			{{ json_data.address_1 }}
 		</div></div></div></div>
-			<div class="some" ><div color="#000000"><div face="Open Sans, serif">
+			<div class="some" ><div color="#000000"><div class="face">
 		<div >
 			{{ json_data.city }}, {{ json_data.state }}
 		</div></div></div></div>
-			<div class="some" ><div color="#000000"><div face="Open Sans, serif">
+			<div class="some" ><div color="#000000"><div class="face">
 		<div >
 			{{ json_data.zip }}
 		</div></div></div></div>
-			<div class="some" ><div color="#70ad47"><div face="Open Sans, serif">
+			<div class="some" ><div color="#70ad47"><div class="face">
 		<div style="color: #70ad47">
 			{{ json_data.email }}
 		</div></div></div></div>
-			<div class="some" ><div color="#000000"><div face="Open Sans, serif">
+			<div class="some" ><div color="#000000"><div class="face">
 		<div >
 			{{ json_data.phone }}
 		</div></div></div></div>
@@ -190,7 +219,7 @@
 </table>
 
 <div class="some" >
-	<div face="Open Sans, serif"><div >&nbsp;</div></div>
+	<div class="face"><div >&nbsp;</div></div>
 </div>
 
 <table width="623" >
@@ -221,17 +250,17 @@
 		<td width="30" style="border: 1px solid #bfbfbf;" bgcolor="#70ad47" 
 		>
 			<div class="some"><div style="color:#ffffff">
-			<div face="Open Sans, serif">
+			<div class="face">
 				<div ><b>QTY</b></div></div></div></div>
 		</td>
 		<td width="50" style="border: 1px solid #bfbfbf;" bgcolor="#70ad47" 
 		>
-			<div class="some"><div style="color:#ffffff"><div face="Open Sans, serif">
+			<div class="some"><div style="color:#ffffff"><div class="face">
 				<div ><b>PRICE</b></div></div></div></div>
 		</td>
 		<td width="60" style="border: 1px solid #bfbfbf;" bgcolor="#70ad47" 
 		>
-			<div class="some"><div style="color:#ffffff"><div face="Open Sans, serif">
+			<div class="some"><div style="color:#ffffff"><div class="face">
 				<div ><b>AMOUNT</b></div></div></div></div>
 		</td>
 	</tr>
@@ -241,7 +270,7 @@
 	<tr>
 		<td width="105" 
 		style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif">
+			<div class="some"><div class="face">
 				<div >
 					{{ item.line_item_id }}
 				</div></div></div>
@@ -249,13 +278,13 @@
 		<td width="318" style="border: 1px solid #bfbfbf; "
 		>
 			<div class="some" >
-				<div face="Open Sans, serif">
+				<div class="face">
 				<div >
 					Home Depot Dynamic Media Advertising Portal -
 				</div>
 				</div>
 			</div>
-			<div class="some"><div face="Open Sans, serif">
+			<div class="some"><div class="face">
 				<div >
 					{{ item.product}}
 				</div>
@@ -265,20 +294,20 @@
 		<td width="30" style="border: 1px solid #bfbfbf; ">
 			<div class="some">
 				<div color="#000000">
-					<div face="Open Sans, serif">
+					<div class="face">
 						<div >
 							1
 						</div></div></div></div>
 		</td>
 		<td width="50" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000"><div face="Open Sans, serif">
+			<div class="some"><div color="#000000"><div class="face">
 				<div >
 					${{ item.campaign_line_item_budget }}
 				</div>
 			</div></div></div>
 		</td>
 		<td width="60" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000"><div face="Open Sans, serif">
+			<div class="some"><div color="#000000"><div class="face">
 				<div ><b>
 					${{ item.campaign_line_item_budget }}
 				</b></div></div></div></div>
@@ -290,7 +319,7 @@
 
 	<tr>
 		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif"><div >
+			<div class="some"><div class="face"><div >
 				Subtotal:
 			</div></div></div>
 		</td>
@@ -310,7 +339,7 @@
 			</div>
 		</td>
 		<td width="60" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000"><div face="Open Sans, serif">
+			<div class="some"><div color="#000000"><div class="face">
 				<div ><b>
 					${{ total }}
 				</b></div></div></div></div>
@@ -318,7 +347,7 @@
 	</tr>
 	<tr>
 		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif"><div >
+			<div class="some"><div class="face"><div >
 				Discount:
 			</div></div></div>
 		</td>
@@ -338,7 +367,7 @@
 			</div>
 		</td>
 		<td width="60" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000">  <div face="Open Sans, serif"><div >
+			<div class="some"><div color="#000000">  <div class="face"><div >
 				<b>
 					0
 				</b></div></div></div></div>
@@ -346,7 +375,7 @@
 	</tr>
 	<tr>
 		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif"><div >
+			<div class="some"><div class="face"><div >
 				Sales Tax Rate:
 			</div></div></div>
 		</td>
@@ -366,13 +395,13 @@
 			</div>
 		</td>
 		<td width="60" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000"><div face="Open Sans, serif"><div >
+			<div class="some"><div color="#000000"><div class="face"><div >
 				<b>0</b></div></div></div></div>
 		</td>
 	</tr>
 	<tr>
 		<td width="105" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif"><div >
+			<div class="some"><div class="face"><div >
 				Sales Tax:
 		</div></div></div>
 		</td>
@@ -392,7 +421,7 @@
 			</div>
 		</td>
 		<td width="60" bgcolor="#d9d9d9" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000">  <div face="Open Sans, serif"><div >
+			<div class="some"><div color="#000000">  <div class="face"><div >
 				<b>
 					0
 				</b></div></div></div></div>
@@ -427,7 +456,7 @@
 	</tr>
 	<tr>
 		<td width="105" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div face="Open Sans, serif"><div >
+			<div class="some"><div class="face"><div >
 				<b>
 					Total:
 			</b></div></div>
@@ -449,7 +478,7 @@
 			</div>
 		</td>
 		<td width="60" style="border: 1px solid #bfbfbf; ">
-			<div class="some"><div color="#000000"><div face="Open Sans, serif"><div >
+			<div class="some"><div color="#000000"><div class="face"><div >
 				<b>
 					${{ total }}
 				</b></div></div></div></div>
@@ -461,7 +490,7 @@
 </div>
 
 <div class="some" >
-<div face="Open Sans, serif"><div >
+<div class="face"><div >
 	<b>
 		Payment Details: 	
 	</b></div></div></div>
@@ -471,7 +500,7 @@
 	<tr>
 		<td width="111" style="border: 1px solid #d9d9d9; ">
 
-			<div class="some" ><div face="Open Sans, serif"><div >
+			<div class="some" ><div class="face"><div >
 				<b>
 				Method:
 			</b></div></div></div>
@@ -486,7 +515,7 @@
 						Cash
 					</span>
 				{% endif %}
-			<div face="Open Sans, serif"><div >
+			<div class="face"><div >
 			</div></div>
 			</div>
 			<div class="some" ><a name="Check2"></a>
@@ -504,7 +533,7 @@
 					</span>
 				{% endif %}
 
-			<div face="Open Sans, serif"><div >
+			<div class="face"><div >
 			</div></div></div>
 			<div class="some" >
 				{% if json_data.payment_method == "ACH" %}
@@ -520,10 +549,10 @@
 				{% endif %}
 				
 
-				<div face="Open Sans, serif"><div >
+				<div class="face"><div >
 				<b>
 			</b>
-			</div></div><div face="Open Sans, serif"><div >
+			</div></div><div class="face"><div >
 			</div></div></div>
 			<div class="some" >
 				{% if json_data.payment_method == "Money_Order" %}
@@ -538,11 +567,11 @@
 					</span>
 				{% endif %}
 
-				<div face="Open Sans, serif">
+				<div class="face">
 					<div >
 					<b>
-			</b></div></div><div face="Open Sans, serif"><div >
-			</div></div><div face="Open Sans, serif"><div >
+			</b></div></div><div class="face"><div >
+			</div></div><div class="face"><div >
 				<b>
 			</b></div></div>
 			</div>
@@ -555,17 +584,17 @@
 
 			</div>
                             {% if json_data.payment_method == "CC" %}
-			<div class="some" ><div face="Open Sans, serif"><div >
+			<div class="some" ><div class="face"><div >
 				<b>
 					Credit Card Number
 					on File: 
 				</b></div></div>
 			</div>
-			<div class="some" ><div face="Open Sans, serif"><div >
+			<div class="some" ><div class="face"><div >
 				<b>
 {{ json_data.paymentmethod_type }} x{{json_data.paymentmethod_last4 }}
 				</b></div></div></div>
-			<div class="some" ><div face="Open Sans, serif"><div >
+			<div class="some" ><div class="face"><div >
 				<b>
 					Expiration Date: 
 {{ json_data.paymentmethod_expirationmonth }} {{ json_data.paymentmethod_expirationyear }}
@@ -579,7 +608,7 @@
 <div class="some" >&nbsp;</div>
 
 <div class="some" >
-<div style="color:#70ad47"><div face="Open Sans, serif"><div >
+<div style="color:#70ad47"><div class="face"><div >
 	<b>
 		Thank you for your business!
 </b></div></div></div></div>
@@ -587,12 +616,12 @@
 
 </div>
 
-<div class="some" ><div face="Open Sans, serif"><div >
+<div class="some" ><div class="face"><div >
 	Should you have any enquiries concerning this receipt, 
 </div></div>
 </div>
 
-<div class="some" ><div face="Open Sans, serif"><div >
+<div class="some" ><div class="face"><div >
 	please contact Customer Support: 1-415-842-7700 
 <a href="mailto:support@accelitas.com">
 <span style="color:#70ad47">
