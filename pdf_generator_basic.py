@@ -34,12 +34,6 @@ body = {
       #"campaign_line_item_budget": "50.75",
       "product": "Facebook"
     },
-    {
-      "line_item_id": 112242,
-      "campaign_line_item_budget": 100.5,
-      #"campaign_line_item_budget": "100.5",
-      "product": "Facebook"
-    }
   ]
 }
 }
